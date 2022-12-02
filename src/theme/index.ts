@@ -1,8 +1,6 @@
 import { createTheme } from "@mui/material/styles";
-import getTypography from "./typography";
 import breakpoints from "./breakpoints";
 import palette from "./palette";
-import { Theme } from "@mui/material";
 
 import appbar from "./components/appbar";
 import button from "./components/button";
@@ -20,6 +18,14 @@ const theme = createTheme({
     spacing: (factor: number) => `${factor}rem`,
 });
 
-theme.typography = getTypography(theme as Theme);
+theme.typography.fontFamily = ["Raleway", "Sans-serif", "Arial"].join(",");
+
+theme.typography.h1 = {
+    fontSize: theme.spacing(1),
+
+    [theme.breakpoints.up("lg")]: {
+        fontSize: theme.spacing(3.5),
+    },
+};
 
 export default theme;

@@ -1,4 +1,6 @@
 import Home from "../../../domains/Home";
+import Login from "../../../domains/Login";
+import Products from "../../../domains/Products";
 
 interface IRoute {
     name: string;
@@ -16,6 +18,21 @@ const routes: IRoute[] = [
             route: "/home",
         },
     },
+    {
+        name: "Login",
+        element: <Login />,
+        path: {
+            route: "/login",
+        },
+    },
+    
+    {
+        name: "Produtos",
+        element: <Products />,
+        path: {
+            route: "/products",
+        },
+    }
 ];
 
 export default routes;

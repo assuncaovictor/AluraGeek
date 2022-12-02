@@ -10,8 +10,8 @@ const appbar: Theme = {
                     paddingTop: theme.spacing(1),
 
                     [theme.breakpoints.up("lg")]: {
-                        paddingBottom: theme.spacing(2),
-                        paddingTop: theme.spacing(2),
+                        paddingBottom: theme.spacing(1.5),
+                        paddingTop: theme.spacing(1.5),
                     },
                 }),
             },
