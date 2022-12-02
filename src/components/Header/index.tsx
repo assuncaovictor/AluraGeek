@@ -26,7 +26,12 @@ function Header() {
                             </Box>
                         </Link>
 
-                        <ContainerInput component="form" onSubmit={(e) => e.preventDefault}>
+                        <ContainerInput
+                            component="form"
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                            }}
+                        >
                             <Input placeholder="O que deseja encontrar?" type="text" id="search" name="search" />
                             <IconButton>
                                 <MagnifyingGlass size={24} />

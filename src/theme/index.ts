@@ -23,9 +23,13 @@ theme.typography.fontFamily = ["Raleway", "Sans-serif", "Arial"].join(",");
 theme.typography.h1 = {
     fontSize: theme.spacing(1),
 
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("sm")]: {
         fontSize: theme.spacing(3.5),
     },
+};
+
+theme.typography.subtitle1 = {
+    fontSize: theme.spacing(1.25),
 };
 
 export default theme;
