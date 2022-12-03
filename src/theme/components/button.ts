@@ -10,13 +10,19 @@ const button: Theme = {
             styleOverrides: {
                 root: ({ theme }) => ({
                     borderRadius: 0,
+                    display: "flex",
                     fontSize: theme.spacing(0.875),
-                    fontWeight: 600,
+                    fontWeight: 400,
+                    gap: theme.spacing(0.375),
                     padding: `${theme.spacing(0.75)} ${theme.spacing(1)}`,
+                    textTransform: "none",
+
+                    [theme.breakpoints.up("sm")]: {
+                        gap: theme.spacing(0.75),
+                    },
 
                     [theme.breakpoints.up("lg")]: {
                         fontSize: theme.spacing(1),
-                        fontWeight: 400,
                         padding: theme.spacing(1),
                     },
                 }),
@@ -25,6 +31,11 @@ const button: Theme = {
                     ":hover": {
                         backgroundColor: theme.palette.primary.light,
                     },
+                }),
+
+                text: ({ theme }) => ({
+                    padding: `0 ${theme.spacing(0.15625)} !important`,
+                    fontWeight: 700,
                 }),
             },
         },

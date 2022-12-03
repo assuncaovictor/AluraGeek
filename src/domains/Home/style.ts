@@ -13,6 +13,7 @@ const Banner = styled(Box)(({ theme }) => ({
     gap: theme.spacing(0.5),
     height: theme.spacing(12),
     justifyContent: "flex-end",
+    marginBottom: theme.spacing(1),
     width: "100%",
 
     [theme.breakpoints.up("sm")]: {
@@ -21,6 +22,10 @@ const Banner = styled(Box)(({ theme }) => ({
 
     [theme.breakpoints.up("md")]: {
         gap: theme.spacing(1),
+    },
+
+    [theme.breakpoints.up("lg")]: {
+        marginBottom: theme.spacing(2),
     },
 }));
 
