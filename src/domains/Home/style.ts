@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import bannerImage from "./img/banner.jpg";
+import bannerImage from "../../assets/img/banner.jpg";
 
 const Banner = styled(Box)(({ theme }) => ({
     background:

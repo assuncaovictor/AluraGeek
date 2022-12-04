@@ -2,12 +2,14 @@ interface Product {
     name: string;
     price: number;
     description?: string;
-    url?: string;
+    image: string;
+    id: string;
 }
 
 interface ListProducts {
     category: string;
     url: string;
+    id: string;
     products: Product[];
 }
 

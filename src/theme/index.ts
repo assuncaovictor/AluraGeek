@@ -4,14 +4,18 @@ import palette from "./palette";
 
 import appbar from "./components/appbar";
 import button from "./components/button";
+import card from "./components/card";
 import container from "./components/container";
+import link from "./components/link";
 import typography from "./components/typography";
 
 const theme = createTheme({
     components: {
         ...appbar,
         ...button,
+        ...card,
         ...container,
+        ...link,
         ...typography,
     },
 
@@ -45,6 +49,11 @@ theme.typography.h3 = {
 
 theme.typography.subtitle1 = {
     fontSize: theme.spacing(1.25),
+};
+
+theme.typography.body2 = {
+    fontSize: theme.spacing(1),
+    fontWeight: 700,
 };
 
 export default theme;
