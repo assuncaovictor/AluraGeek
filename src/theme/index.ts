@@ -6,6 +6,7 @@ import appbar from "./components/appbar";
 import button from "./components/button";
 import card from "./components/card";
 import container from "./components/container";
+import input from "./components/input";
 import link from "./components/link";
 import typography from "./components/typography";
 
@@ -15,6 +16,7 @@ const theme = createTheme({
         ...button,
         ...card,
         ...container,
+        ...input,
         ...link,
         ...typography,
     },
