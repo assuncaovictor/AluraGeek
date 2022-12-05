@@ -19,10 +19,10 @@ function Header() {
         <AppBar position="static" variant="elevation">
             <Container>
                 <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
-                    <Stack gap={2} direction="row" alignItems="center">
+                    <Stack gap={{ xs: 0.5, md: 2 }} direction="row" alignItems="center">
                         <Link to="home">
                             <Box component="h1" mr={2}>
-                                <Box component="img" src={logo} alt="logo" />
+                                <Box component="img" src={logo} alt="logo" width={{ xs: 100, md: "auto" }} />
                             </Box>
                         </Link>
 
@@ -31,6 +31,7 @@ function Header() {
                             onSubmit={(e) => {
                                 e.preventDefault();
                             }}
+                            display={{ xs: "none", sm: "flex" }}
                         >
                             <Input placeholder="O que deseja encontrar?" type="text" id="search" name="search" />
                             <IconButton>
@@ -39,9 +40,13 @@ function Header() {
                         </ContainerInput>
                     </Stack>
 
-                    <Button variant="outlined" sx={{ width: { xs: 166, lg: 182 } }} component={Link} to="/login">
+                    <Button variant="outlined" sx={{ width: { xs: "auto", md: 182 } }} component={Link} to="/login">
                         Login
                     </Button>
+
+                    <IconButton sx={{ display: { xs: "flex", sm: "none" } }}>
+                        <MagnifyingGlass size={24} />
+                    </IconButton>
                 </Toolbar>
             </Container>
         </AppBar>

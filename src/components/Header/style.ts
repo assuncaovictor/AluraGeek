@@ -12,10 +12,14 @@ const ContainerInput = styled(Box)(({ theme }) => ({
 }));
 
 const Input = styled(InputBase)(({ theme }) => ({
-    width: theme.spacing(20.5),
+    width: theme.spacing(12),
 
     "::placeholder": {
         color: "#A2A2A2",
+    },
+
+    [theme.breakpoints.up("md")]: {
+        width: theme.spacing(20.5),
     },
 }));
 
